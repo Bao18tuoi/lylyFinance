@@ -1,0 +1,9 @@
+@import "./exchange/exchange";
+@import "./nft/nft";
+@import "./user/user";
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap");
+
+body,html{
+    font-family: 'Titillium Web', sans-serif;
+}

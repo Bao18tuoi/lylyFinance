@@ -1,0 +1,166 @@
+.user {
+  width: 80%;
+  margin: 100px auto;
+  padding: 20px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #161616;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .user__input {
+    width: 40%;
+    color: rgba(255, 255, 255, 0.699);
+    font-weight: 200;
+    h3 {
+      font-weight: 600;
+    }
+    .input__title,
+    h3 {
+      color: white;
+    }
+    .input__title,
+    .input__social,
+    .input__form {
+      padding: 15px 0;
+    }
+    .input__title {
+      font-weight: 600;
+      font-variant: petite-caps;
+      font-size: 28px;
+    }
+    .input__social {
+      .social__site {
+        display: flex;
+        .google,
+        .facebook {
+          margin-right: 10px;
+          width: 45%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          padding: 10px 0;
+          border: none;
+          border-radius: 10px;
+          background-color: rgb(66, 66, 66);
+          & > * {
+            padding: 0 5px;
+          }
+          i {
+            background: linear-gradient(90deg, #c1ced5, #dec745, #909d89);
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    .input__form {
+      .form__box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          background-color: transparent;
+          border: 1px solid white;
+          border-radius: 5px;
+        }
+        .form__require {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .require__check {
+            display: flex;
+            gap: 5px;
+          }
+          input[type="checkbox"] {
+            // vertical-align: middle;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 7px;
+            color: transparent;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+          }
+          input[type="checkbox"]:checked {
+            background-color: #dec745;
+            border: 1px white double;
+          }
+          a {
+            text-decoration: none;
+            color: #dec745;
+          }
+        }
+        .button {
+          background: linear-gradient(90deg, #c1ced5, #dec745, #909d89);
+          width: 20%;
+          border: none;
+          margin: 20px 0;
+        }
+      }
+    }
+    .social__site,
+    .form__box {
+      padding-top: 10px;
+    }
+  }
+  .user__img {
+    width: 40%;
+    object-fit: contain;
+    height: 530px;
+    img {
+      border-radius: 15px;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .input__title h1 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .user__input {
+    font-size: 12px;
+  }
+  .button {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .user {
+    .user__input {
+      width: 60%;
+    }
+    .user__img {
+      width: 30%;
+      height: 300px;
+    }
+  }
+}
+@media screen and( max-width:415px) {
+  .user {
+    .user__input {
+      width: 80%;
+      .input__social .social__site {
+        display: block;
+        .facebook,
+        .google {
+          width: 80%;
+          margin: 10px auto;
+        }
+      }
+    }
+    .user__img {
+      display: none;
+    }
+  }
+}
